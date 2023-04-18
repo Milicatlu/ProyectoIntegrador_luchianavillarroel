@@ -1,0 +1,16 @@
+.row{
+    padding: 40px;
+}
+div{
+    
+    background-color: black;
+}
+h1, h3{
+    display: inline;
+}
+.container h1{
+   padding: 30px;
+}
+.experiencialaboral{
+    left: 30px;
+}
