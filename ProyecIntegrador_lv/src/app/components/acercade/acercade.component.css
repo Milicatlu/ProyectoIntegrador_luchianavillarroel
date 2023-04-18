@@ -35,17 +35,9 @@
         box-shadow: 2px 3px 3px rgb(19, 18, 18);
         
         left: 33%;
-        top:700px;
+        top:800px;
     }
 }
-
-
-  
-  .col-xs-12 {
-    margin-top: 20px;
-  }
-  
-
   .conteiner  {
     height: 300px;
     background-color: black;

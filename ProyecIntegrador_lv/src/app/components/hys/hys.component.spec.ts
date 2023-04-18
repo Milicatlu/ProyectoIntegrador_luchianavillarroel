@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { RedessComponent } from './redess.component';
+import { HysComponent } from './hys.component';
 
-describe('RedessComponent', () => {
-  let component: RedessComponent;
-  let fixture: ComponentFixture<RedessComponent>;
+describe('HysComponent', () => {
+  let component: HysComponent;
+  let fixture: ComponentFixture<HysComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ RedessComponent ]
+      declarations: [ HysComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(RedessComponent);
+    fixture = TestBed.createComponent(HysComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

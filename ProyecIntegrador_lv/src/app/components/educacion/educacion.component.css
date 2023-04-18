@@ -1,16 +1,19 @@
 .row{
-    padding: 40px;
+    padding: 20px;
+    background: rgb(0, 0, 0);
 }
 div{
-    
-    background-color: black;
+    background: black;
+    color:#eee7e7;
+    padding-bottom: 20px;
+    margin: 0;
 }
 h1, h3{
     display: inline;
 }
-.container h1{
-   padding: 30px;
+.algo{
+    margin-left: 50px;
 }
-.experiencialaboral{
-    left: 30px;
-}
+.no-margin-bottom {
+    margin-bottom: 0;
+  }
