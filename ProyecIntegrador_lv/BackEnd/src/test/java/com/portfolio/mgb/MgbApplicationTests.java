@@ -1,10 +1,10 @@
-package com.portfolio.mili;
+package com.portfolio.mgb;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MiliApplicationTests {
+class MgbApplicationTests {
 
 	@Test
 	void contextLoads() {

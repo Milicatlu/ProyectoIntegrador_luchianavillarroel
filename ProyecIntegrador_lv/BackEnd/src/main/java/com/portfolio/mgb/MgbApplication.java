@@ -1,13 +1,13 @@
-package com.portfolio.mili;
+package com.portfolio.mgb;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MiliApplication {
+public class MgbApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MiliApplication.class, args);
+		SpringApplication.run(MgbApplication.class, args);
 	}
 
 }
