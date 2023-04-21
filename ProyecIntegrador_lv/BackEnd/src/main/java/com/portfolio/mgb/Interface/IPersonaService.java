@@ -10,7 +10,7 @@ public interface IPersonaService {
     //guardar objeto tipo persona
     public void savePersona(Persona persona);
     //ALIMINAR  un objeto pero se busca por el ID
-    public void delatePersona(Long id);
+    public void deletePersona(Long id);
     //buscar persona por el id
     public Persona findPersona(Long id);
 }

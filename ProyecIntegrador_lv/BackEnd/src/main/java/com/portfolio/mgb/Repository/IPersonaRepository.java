@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 
-public interface IPersonaRepostory extends JpaRepository<Persona, Long>{
+public interface IPersonaRepository extends JpaRepository<Persona, Long>{
     
 }
+
