@@ -1,5 +1,6 @@
 package com.portfolio.mgb.Security.Entity;
 
+
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Column;
@@ -31,6 +32,7 @@ public class Usuario {
     @ManyToMany(fetch = FetchType.EAGER )
     @JoinTable(name="usuario_rol", joinColumns = @JoinColumn(name="usuario_id"), inverseJoinColumns = @JoinColumn(name="rol_id"))
     private Set<Rol> roles= new HashSet<>();
+  
     //contructores
 
     public Usuario() {
