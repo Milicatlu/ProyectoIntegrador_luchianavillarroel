@@ -5,6 +5,7 @@
  */
 package com.portfolio.mgb.Security.Dto;
 
+import com.portfolio.mgb.Security.Enums.RolNombre;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -17,7 +18,7 @@ public class NuevoUsuario {
     private String nombreUsuario;
     private String email;
     private String password;
-    private Set<String> roles= new HashSet<>();
+    private Set<RolNombre> roles= new HashSet<>();
     
     //setter y getters
 
@@ -53,12 +54,17 @@ public class NuevoUsuario {
         this.password = password;
     }
 
-    public Set<String> getRoles() {
+   public Set<RolNombre> getRoles() {
         return roles;
     }
 
-    public void setRoles(Set<String> roles) {
+    public void setRoles(Set<RolNombre> roles) {
         this.roles = roles;
     }
     
 }
+ //public Set<String> getRoles() {
+  //      return roles;}
+
+  //  public void setRoles(Set<String> roles) {
+    //    this.roles = roles;}
