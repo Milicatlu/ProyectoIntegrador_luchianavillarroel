@@ -49,7 +49,7 @@ public class MainSecurity {
         http.cors().and().csrf().disable()
               .exceptionHandling().authenticationEntryPoint(jwtEntryPoint).and().sessionManagement()
                 .sessionCreationPolicy(SessionCreationPolicy.STATELESS).and().authorizeHttpRequests()
-        .antMatchers("/**").permitAll().anyRequest().authenticated();
+        .antMatchers("**").permitAll().anyRequest().authenticated();
 
         http.addFilterBefore(jwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 
