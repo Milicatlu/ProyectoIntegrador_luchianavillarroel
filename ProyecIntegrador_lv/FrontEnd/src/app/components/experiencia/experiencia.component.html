@@ -13,12 +13,12 @@
   <div class="col-lg-1"></div>
   <div class="col-lg-11">
     <table class="table">
-      <tbody>
+      <tbody >
         <tr *ngFor="let Experiencia of expe">
-          <td>
-            <h3>{{ Experiencia.nombreE }}</h3>
+          <td *ngIf="Experiencia">
+            <h3 >{{ Experiencia.nombreE }}</h3>
           </td>
-          <td>{{ Experiencia.descriptionE }}</td>
+          <td *ngIf="Experiencia">{{ Experiencia.descriptionE }}</td>
           <td *ngIf="isLogged">
             <button
               type="button"

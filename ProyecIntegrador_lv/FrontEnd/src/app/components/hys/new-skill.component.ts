@@ -14,7 +14,7 @@ export class NewSkillComponent implements OnInit {
 constructor(private skillS: SkillService, private router: Router){}
 
 ngOnInit(): void {
-
+ 
 }
 onCreate(): void {
   const skill= new Skill(this.nombre,this.porcentaje);

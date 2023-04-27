@@ -1,18 +1,29 @@
 <div class="container-fluid">
-    <div class="row">
-        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <img src="../../../assets/fotocv.jpeg" class="img-fluid fotocv"alt="" >
+  <div class="row"  *ngIf="persona && isLogged">
+    <button
+      type="button"
+      class="btn btn-light"
+      routerLink="/editacercade/1"
+      
+    >
+      Editar persona
+    </button>
+
+    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2" >
+      <img *ngIf="persona" src={{persona.img}} class="img-fluid " id="fotodeperfil" />
     </div>
-    
+
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2">
-        <p class="nombre" *ngIf="persona">{{persona.nombre}} {{persona.apellido}}</p>
-        <p class="nombreE">Full Stack Developer Jr</p>
+      <p class="nombre" *ngIf="persona">
+        {{ persona.nombre }} {{ persona.apellido }}
+      </p>
+      <p class="nombreE">Full Stack Developer Jr</p>
     </div>
     <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
-        <span>
-            <h1 class="acercademi">Acerca de mi</h1>
-            <p class="acercademi-texto">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt magni qui at ea dolores rerum nisi cum inventore eligendi! Ipsa molestias nisi magnam possimus. Ex molestiae reiciendis tempora quas aperiam?</p>
-        </span>
-        </div>
+      <span>
+        <h1 class="acercademi">Acerca de mi</h1>
+        <p class="acercademi-texto">{{ persona.description }}</p>
+      </span>
     </div>
+  </div>
 </div>
