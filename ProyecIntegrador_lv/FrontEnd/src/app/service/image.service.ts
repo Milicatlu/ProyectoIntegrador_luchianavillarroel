@@ -1,28 +1,34 @@
 import { Injectable } from '@angular/core';
-import{ Storage, getDownloadURL, list, ref, uploadBytes} from '@angular/fire/storage';
+import { Storage, list, ref, uploadBytes } from '@angular/fire/storage'
+import { getDownloadURL } from '@firebase/storage';
+import { async } from 'rxjs';
+
 @Injectable({
   providedIn: 'root'
 })
 export class ImageService {
-url:string="";
+  url: string = "";
+
   constructor(private storage: Storage) { }
 
-  uploadImage($event:any, name:string){
-    const file=$event.target.files[0]
-    const  imgRef= ref(this.storage, `imagen/`+ name )
-    uploadBytes(imgRef,file)
-    .then(response=>{this.getImage()})
-    .catch(error=>console.log(error))
+  public uploadImage($event: any, name: string) {
+    const file = $event.target.files[0]
+    const imgRef = ref(this.storage, 'imagen/' + name)
+    uploadBytes(imgRef, file)
+      .then(Response => {
+        this.getImages()
+      })
+      .catch(error => console.log(error));
   }
-  getImage(){
-    const imageRef= ref(this.storage,`imagen/`)
-    list(imageRef)
-    .then(async reponse =>{
-      for(let item of reponse.items){
-        this.url= await getDownloadURL(item);
-        console.log("La url es: "+this.url);
+
+  getImages(){
+    const imagesRef = ref(this.storage, 'imagen');
+    list(imagesRef)
+    .then(async response => {
+      for(let item of response.items){
+        this.url = await getDownloadURL(item);
       }
     })
-    .catch(error=>console.log(error));
+    .catch(error => console.log(error))
   }
 }
