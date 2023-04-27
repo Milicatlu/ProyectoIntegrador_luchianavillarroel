@@ -18,7 +18,7 @@ ngOnInit():void {
   this.personaS.detail(id).subscribe(
     data => {
       this.persona = data;
-      
+      this.imageService.url = this.persona.img;
     }, err => {
       alert('Error al modificar ');
       this.router.navigate(['']);
@@ -41,7 +41,7 @@ onUpdate() {
 uploadImage($event:any) {
   const id= this.activatedRouter.snapshot.params['id'];
   const name="perfil_" + id;
-  this.persona.img = this.imageService.uploadImage($event, name);
+this.imageService.uploadImage($event, name);
 
 }
 }
